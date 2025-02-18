@@ -36,12 +36,14 @@ func main() {
 	
 
 	rootCmd.AddCommand(
-		commands.GetUsersCmd(apiURL, apiToken),
+		commands.ListUserCmd(apiURL, apiToken),
 		commands.GetUserCmd(apiURL, apiToken),
 		commands.CreateUserCmd(apiURL, apiToken),
 		commands.UpdateUserCmd(apiURL, apiToken),
-		commands.GetUserCmd(apiURL, apiToken),
+		commands.ListUserCmd(apiURL, apiToken),
 		commands.DeleteUserCmd(apiURL, apiToken),
+		commands.ListDevicesCmd(apiURL, apiToken),
+		commands.GetDeviceCmd(apiURL, apiToken),
 	)
 
 	if err := rootCmd.Execute(); err != nil {
